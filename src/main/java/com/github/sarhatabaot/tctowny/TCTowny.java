@@ -1,8 +1,8 @@
 package com.github.sarhatabaot.tctowny;
 
 import media.xen.tradingcards.TradingCards;
-import media.xen.tradingcards.addons.AddonLogger;
-import media.xen.tradingcards.addons.TradingCardsAddon;
+import media.xen.tradingcards.api.addons.AddonLogger;
+import media.xen.tradingcards.api.addons.TradingCardsAddon;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class TCTowny extends JavaPlugin implements TradingCardsAddon {
@@ -23,8 +23,4 @@ public final class TCTowny extends JavaPlugin implements TradingCardsAddon {
 		addonLogger = new AddonLogger(getName(), tradingCards);
 	}
 
-	@Override
-	public void onDisable() {
-		// Plugin shutdown logic
-	}
 }

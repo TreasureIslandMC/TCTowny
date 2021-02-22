@@ -3,9 +3,10 @@ package com.github.sarhatabaot.tctowny;
 
 import com.palmergames.bukkit.towny.event.NewNationEvent;
 import com.palmergames.bukkit.towny.event.NewTownEvent;
+import media.xen.tradingcards.CardUtil;
 import media.xen.tradingcards.TradingCards;
-import media.xen.tradingcards.addons.AddonListener;
-import media.xen.tradingcards.addons.TradingCardsAddon;
+import media.xen.tradingcards.api.addons.AddonListener;
+import media.xen.tradingcards.api.addons.TradingCardsAddon;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -73,7 +74,7 @@ public class TownListener extends AddonListener {
 
 
 				String townInfo = getCalendarMode(month, date, year);
-				tradingCards.createCard(p, townRarity, dPrefix + townName + dSuffix, townSeries, townType, hasShiny, townInfo, "Founder: " + p.getName());
+				CardUtil.createCard(p, townRarity, dPrefix + townName + dSuffix, townSeries, townType, hasShiny, townInfo, "Founder: " + p.getName());
 				return;
 			}
 		}
@@ -83,7 +84,7 @@ public class TownListener extends AddonListener {
 
 		dPrefix = getCalendarMode(month, date, year);
 
-		tradingCards.createCard(p, townRarity, townName, townSeries, townType, hasShiny, dPrefix, "Founder: " + p.getName());
+		CardUtil.createCard(p, townRarity, townName, townSeries, townType, hasShiny, dPrefix, "Founder: " + p.getName());
 
 	}
 
@@ -147,7 +148,7 @@ public class TownListener extends AddonListener {
 
 				String townInfo = getCalendarMode(month,date,year);
 
-				tradingCards.createCard(p, townRarity, dPrefix + townName + dSuffix, townSeries, townType, hasShiny, townInfo, "Founder: " + p.getName());
+				CardUtil.createCard(p, townRarity, dPrefix + townName + dSuffix, townSeries, townType, hasShiny, townInfo, "Founder: " + p.getName());
 			}
 			return;
 		}
@@ -157,7 +158,7 @@ public class TownListener extends AddonListener {
 		tradingCardsAddon.getAddonLogger().debug("Emperor name: " + e.getNation().getCapital().getMayor().getName());
 		dPrefix = getCalendarMode(month,date,year);
 
-		tradingCards.createCard(p, townRarity, townName, townSeries, townType, hasShiny, dPrefix, "Founder: " + p.getName());
+		CardUtil.createCard(p, townRarity, townName, townSeries, townType, hasShiny, dPrefix, "Founder: " + p.getName());
 
 
 	}
