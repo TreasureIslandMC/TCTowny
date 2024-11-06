@@ -1,3 +1,5 @@
+# This feature has been deprecated and merged into the main plugin. Just use that instead.
+
 # Towny support for Trading Cards
 Adds support for [TradingCards](https://github.com/TreasureIslandMC/XenTradingCards).
 
